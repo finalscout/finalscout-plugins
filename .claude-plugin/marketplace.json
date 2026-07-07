@@ -1,0 +1,37 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "finalscout-plugins",
+  "description": "Official FinalScout plugin marketplace for Claude Code — B2B contact enrichment and email finding tools.",
+  "owner": {
+    "name": "FinalScout",
+    "email": "dev@finalscout.com"
+  },
+  "plugins": [
+    {
+      "name": "finalscout",
+      "displayName": "FinalScout Email Finder",
+      "source": {
+        "source": "github",
+        "repo": "finalscout/claudecode-plugin-b2b-contact-enrichment"
+      },
+      "description": "Find verified professional email addresses with the FinalScout API — by LinkedIn profile URL, full name + company domain, or news article URL. Single lookups, bulk batches with progress tracking, CSV export, webhooks, and credit checks.",
+      "author": {
+        "name": "FinalScout",
+        "email": "dev@finalscout.com"
+      },
+      "homepage": "https://finalscout.com",
+      "repository": "https://github.com/finalscout/claudecode-plugin-b2b-contact-enrichment",
+      "license": "MIT",
+      "category": "sales",
+      "keywords": [
+        "email-finder",
+        "contact-enrichment",
+        "b2b",
+        "linkedin",
+        "email-verification",
+        "lead-generation",
+        "finalscout"
+      ]
+    }
+  ]
+}
