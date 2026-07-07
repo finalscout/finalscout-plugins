@@ -16,16 +16,43 @@ Then install a plugin:
 /plugin install finalscout@finalscout-plugins
 ```
 
-These commands work the same everywhere Claude Code runs — the terminal CLI, the desktop app (Mac/Windows), and the IDE extensions.
+## Using in the Claude desktop app
 
-### Using in the Claude Code desktop app
+The desktop app doesn't support `/plugin` slash commands — install through the settings UI instead:
 
-1. Open the desktop app and type `/plugin marketplace add finalscout/finalscout-plugins` in the chat input.
-2. Type `/plugin` to open the plugin manager, then go to the **Discover** tab to browse this marketplace's plugins.
-3. Select a plugin (for example **FinalScout Email Finder**) and press **Enter** to view its details — including the commands and skills it will install — then choose an installation scope (**User** to install for yourself across all projects).
-4. Run `/reload-plugins` (or restart the session) to activate the plugin.
+1. In the sidebar, click **Customize**.
 
-Alternatively, skip the browsing UI and install directly with `/plugin install finalscout@finalscout-plugins`.
+   ![Sidebar with Customize entry](docs/images/01-sidebar-customize.png)
+
+2. Under **Customize**, select **Plugins**.
+
+   ![Customize section with Plugins entry](docs/images/02-customize-plugins.png)
+
+3. In the Plugins panel, click **Add** → **Add marketplace**.
+
+   ![Add menu with Add marketplace option](docs/images/03-add-marketplace-menu.png)
+
+4. Choose **Add from a repository**.
+
+   ![Add marketplace dialog with Add from a repository option](docs/images/04-add-from-repository.png)
+
+5. Enter `finalscout/finalscout-plugins` as the URL and click **Sync**.
+
+6. Find **FinalScout Email Finder** in the plugin list and click **+** to install it.
+
+7. The plugin now appears in your **Plugins** list.
+
+8. Set your FinalScout API key (get one at <https://finalscout.com/app/api/settings>) as the `FINALSCOUT_API_KEY` environment variable, e.g. in `~/.claude/settings.json`:
+
+   ```json
+   {
+     "env": {
+       "FINALSCOUT_API_KEY": "your-api-key"
+     }
+   }
+   ```
+
+9. Start a new chat and ask naturally — e.g. *"find the email for this LinkedIn profile"*, *"find jane doe's email at acme.com"*, or *"how many FinalScout credits do I have left?"*.
 
 ## Available plugins
 
